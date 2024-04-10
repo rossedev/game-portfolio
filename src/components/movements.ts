@@ -1,14 +1,17 @@
-export const mouseMovements = (kab: any, mouseBtn: any, player: any) => {
-  // TODO
+import type { MouseButton } from "kaboom";
+import { lowerBound, upperBound } from "../utils/constants";
+
+export const mouseMovements = (
+  kab: any,
+  mouseBtn: MouseButton,
+  player: any
+) => {
   if (mouseBtn !== "left" || player.isInDialogue) return;
 
   const worldMousePos = kab.toWorld(kab.mousePos());
   player.moveTo(worldMousePos, player.speed);
 
   const mouseAngle = player.pos.angle(worldMousePos);
-
-  const lowerBound = 50;
-  const upperBound = 125;
 
   if (
     mouseAngle > lowerBound &&
@@ -63,7 +66,17 @@ export const afterMovement = (player: any) => {
   player.play("idle-side");
 };
 
-export const handleKeyPress = ({ player, anim, direction, coordInX }: any) => {
+export const handleKeyDown = ({
+  player,
+  anim,
+  direction,
+  coordInX,
+}: {
+  player: any;
+  anim: string;
+  direction: string;
+  coordInX: boolean;
+}) => {
   if (player.isInDialogue) return;
 
   const isLeftDir = direction === "left";

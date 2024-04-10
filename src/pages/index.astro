@@ -1,79 +1,13 @@
 ---
+import { Textbox } from '../components/Textbox';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<script src="../utils/canvas"></script>
-
-<style>
-	#app {
-		width: 100%;
-		height: 100%;
-		position: relative;
-	}
-	#textbox-container {
-		display: none;
-	}
-
-	#textbox {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		justify-content: flex-start;
-		align-items: flex-start;
-		padding: 1rem;
-		min-height: 10vh;
-		left: 10%;
-		right: 10%;
-		bottom: 2vh;
-		background: #eee;
-		border-radius: 3px;
-		outline-style: solid;
-		word-spacing: 0.2rem;
-		filter:drop-shadow(0 0 0.75rem rgb(112,112,112))
-	}
-
-	.ui-text {
-		margin: 0;
-		user-select: none;
-	}
-
-	.ui-close-btn {
-		font-family: inherit;
-		border-style: none;
-		border-radius: 3px;
-		padding: 1rem;
-		font-size: inherit;
-	}
-	.btn-container{
-		align-self: flex-end;
-		margin-top: 1rem;
-	}
-
-	.note {
-		position: absolute;
-		display: flex;
-		flex-direction: column;
-		left: 5%;
-		top: 1vh;
-		color: rgb(238, 238, 238);
-		user-select: none;
-	}
-</style>
-
 <Layout title="Welcome to Astro.">
 	<main id="app">
-		<div id="ui">
-			<p class="note">Tab/Click around to move</p>	
-			<div id="textbox-container">
-				<div id="textbox">
-					<p id="dialogue" class="ui-text"></p>
-					<div class="btn-container">
-						<button id="close" class="ui-close-btn">Close</button>
-					</div>
-				</div>
-			</div>
-		</div>	
-		<canvas id="game"></canvas>		
+		<Textbox/>
+		<canvas id="game"></canvas>
 	</main>
 </Layout>
+
+<script src="../utils/canvas"></script>

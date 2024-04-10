@@ -1,7 +1,8 @@
+import type { Layer } from "../types/map";
 import { dialogueData, scaleFactor } from "../utils/constants";
-import { displayDialogue } from "../utils/utils";
+import { displayDialogue } from "../utils/displayDialogue";
 
-export const boundaries = (layer: any, kab: any, player: any, map: any) => {
+export const boundaries = (layer: Layer, kab: any, player: any, map: any) => {
   if (layer.name === "boundaries") {
     for (const boundary of layer.objects) {
       map.add([

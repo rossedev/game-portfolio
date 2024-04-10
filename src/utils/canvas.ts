@@ -1,35 +1,39 @@
+import type { MouseButton } from "kaboom";
 import { boundaries } from "../components/boundaries";
-import { configPlayer } from "../components/configPlayer";
+import { characterPlayer, configPlayer } from "../components/configPlayer";
 import {
   afterMovement,
-  handleKeyPress,
+  handleKeyDown,
   mouseMovements,
 } from "../components/movements";
+import { mapCanvas } from "../data/map";
+import type { Map } from "../types/map";
 import { kab } from "../utils/kaboomCtx";
-import { scaleFactor } from "./constants";
-import { setCamScale } from "./utils";
+import {
+  backgroundColor,
+  initScene,
+  scaleFactor,
+  spriteCharacterImage,
+  spriteCharacterName,
+  spriteMapImage,
+  spriteMapName,
+} from "./constants";
+import { setCamScale } from "./displayDialogue";
 
-kab.loadSprite("spritesheet", "./spritesheet.png", {
-  sliceX: 39,
-  sliceY: 31,
-  anims: {
-    "idle-down": 964,
-    "walk-down": { from: 964, to: 967, loop: true, speed: 8 },
-    "idle-side": 1003,
-    "walk-side": { from: 1003, to: 1006, loop: true, speed: 8 },
-    "idle-up": 1042,
-    "walk-up": { from: 1042, to: 1045, loop: true, speed: 8 },
-  },
-});
+kab.loadSprite(spriteCharacterName, spriteCharacterImage, characterPlayer());
 
-kab.loadSprite("map", "./map.png");
-kab.setBackground(kab.Color.fromHex("#242229"));
+kab.loadSprite(spriteMapName, spriteMapImage);
+kab.setBackground(kab.Color.fromHex(backgroundColor));
 
-kab.scene("index", async () => {
-  const mapData = await (await fetch("./map.json")).json();
+kab.scene(initScene, async () => {
+  const mapData: Map = await mapCanvas();
   const layers = mapData.layers;
 
-  const map = kab.add([kab.sprite("map"), kab.pos(0), kab.scale(scaleFactor)]);
+  const map = kab.add([
+    kab.sprite(spriteMapName),
+    kab.pos(0),
+    kab.scale(scaleFactor),
+  ]);
 
   const player = configPlayer(kab);
 
@@ -47,7 +51,7 @@ kab.scene("index", async () => {
     kab.camPos(player.pos.x + 10, player.pos.y + 50);
   });
 
-  kab.onMouseDown((mouseBtn) => {
+  kab.onMouseDown((mouseBtn: MouseButton) => {
     mouseMovements(kab, mouseBtn, player);
   });
 
@@ -60,17 +64,16 @@ kab.scene("index", async () => {
   });
 
   kab.onKeyDown("down", () => {
-    handleKeyPress({
+    handleKeyDown({
       player,
       anim: "walk-down",
       direction: "down",
       coordInX: false,
     });
-    
   });
 
   kab.onKeyDown("up", () => {
-    handleKeyPress({
+    handleKeyDown({
       player,
       anim: "walk-up",
       direction: "up",
@@ -78,7 +81,7 @@ kab.scene("index", async () => {
     });
   });
   kab.onKeyDown("left", () => {
-    handleKeyPress({
+    handleKeyDown({
       player,
       anim: "walk-side",
       direction: "left",
@@ -86,7 +89,7 @@ kab.scene("index", async () => {
     });
   });
   kab.onKeyDown("right", () => {
-    handleKeyPress({
+    handleKeyDown({
       player,
       anim: "walk-side",
       direction: "right",

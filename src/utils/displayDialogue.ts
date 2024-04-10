@@ -1,15 +1,15 @@
 export function displayDialogue(text: string, onDisplayEnd: () => void) {
-  const dialogueUI = document.getElementById("textbox-container");
-  const dialogue = document.getElementById("dialogue");
-  const closeBtn = document.getElementById("close");
-
-  if (!dialogueUI || !dialogue || !closeBtn) {
-    return;
-  }
+  const dialogueUI = document.getElementById(
+    "textbox-container"
+  ) as HTMLInputElement;
+  const dialogue = document.getElementById("dialogue") as HTMLInputElement
+  const closeBtn = document.getElementById("close") as HTMLInputElement;
+  const canvas = document.getElementById("game") as HTMLInputElement;
 
   dialogueUI.style.display = "block";
   let index = 0;
   let currentText = "";
+  
   const intervalRef = setInterval(() => {
     if (index < text.length) {
       currentText += text[index];
@@ -22,23 +22,24 @@ export function displayDialogue(text: string, onDisplayEnd: () => void) {
   }, 1);
 
   function onCloseBtnClick() {
-    if (!dialogueUI || !dialogue || !closeBtn) {
-      return;
-    }
 
     onDisplayEnd();
     dialogueUI.style.display = "none";
     dialogue.innerHTML = "";
+    canvas.focus();
+
     clearInterval(intervalRef);
+
     closeBtn.removeEventListener("click", onCloseBtnClick);
+    document.removeEventListener("keydown", (key: KeyboardEvent) =>
+      onKeyDown(key, closeBtn)
+    );
   }
 
   closeBtn.addEventListener("click", onCloseBtnClick);
 
-  addEventListener("keypress", (key) => {
-    if (key.code === "Enter") {
-      closeBtn.click();
-    }
+  document.addEventListener("keydown", (key: KeyboardEvent) => {
+    onKeyDown(key, closeBtn);
   });
 }
 
@@ -48,5 +49,11 @@ export function setCamScale(k: any) {
     k.camScale(k.vec2(1));
   } else {
     k.camScale(k.vec2(1));
+  }
+}
+
+function onKeyDown(key: KeyboardEvent, closeBtn: HTMLInputElement) {
+  if (key.code === "Enter" || key.code === "Escape") {
+    closeBtn.click();
   }
 }
