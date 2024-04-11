@@ -1,5 +1,5 @@
 import type { MouseButton } from "kaboom";
-import { lowerBound, upperBound } from "../utils/constants";
+import { lowerBound, upperBound } from "@/utils/constants";
 
 export const mouseMovements = (
   kab: any,
@@ -53,6 +53,7 @@ export const mouseMovements = (
 };
 
 export const afterMovement = (player: any) => {
+  console.log('player.direction', player.direction);
   if (player.direction === "down") {
     player.play("idle-down");
     return;

@@ -1,4 +1,4 @@
-import { scaleFactor, spriteCharacterName } from "../utils/constants";
+import { scaleFactor, spriteCharacterName } from "@/utils/constants";
 
 export const configPlayer = (kab: any) => {
   const player = kab.make([

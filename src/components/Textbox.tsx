@@ -1,9 +1,12 @@
-import "../styles/textbox.css";
+import "../styles/app.css";
 
 export const Textbox = () => {
   return (
     <div id="ui">
-      <p className="note">Tab/Click around to move</p>
+      <div>
+        <p className="note">Rosa Morales</p>
+      </div>
+
       <div id="textbox-container">
         <div id="textbox">
           <p id="dialogue" className="ui-text"></p>

@@ -1,0 +1,21 @@
+---
+import Layout from "@/layouts/Layout.astro";
+import { Textbox } from "../Textbox";
+import { getI18N } from "@/i18n";
+import "@/styles/app.css";
+import Instructions from "../Instructions";
+
+
+const i18n = getI18N({currentLocale: Astro.props.lang})
+---
+
+<Layout title={i18n.SEO_TITLE}>
+	
+	<main id="app">
+		<Textbox/>
+		<Instructions client:load/>	
+		<canvas id="game"></canvas>
+	</main>
+</Layout>
+
+<script src="../../../scripts/canvas"></script>

@@ -1,6 +1,12 @@
-import type { Layer } from "../types/map";
-import { dialogueData, scaleFactor } from "../utils/constants";
-import { displayDialogue } from "../utils/displayDialogue";
+import { getI18N } from "@/i18n";
+import type { Layer } from "@/types/map";
+import { getLangFromUrl } from "@/utils/configCanvas";
+import { scaleFactor } from "@/utils/constants";
+import { displayDialogue } from "./displayDialogue";
+
+const urlParams = new URL(location.href);
+const locale = getLangFromUrl(urlParams);
+const i18n: any = getI18N({ currentLocale: locale });
 
 export const boundaries = (layer: Layer, kab: any, player: any, map: any) => {
   if (layer.name === "boundaries") {
@@ -17,10 +23,9 @@ export const boundaries = (layer: Layer, kab: any, player: any, map: any) => {
       if (boundary.name) {
         player.onCollide(boundary.name, () => {
           player.isInDialogue = true;
-          displayDialogue(
-            dialogueData[boundary.name],
-            () => (player.isInDialogue = false)
-          );
+          const translate = i18n[boundary.name];
+
+          displayDialogue(translate, () => (player.isInDialogue = false));
         });
       }
     }

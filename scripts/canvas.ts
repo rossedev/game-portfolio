@@ -1,14 +1,10 @@
 import type { MouseButton } from "kaboom";
-import { boundaries } from "../components/boundaries";
-import { characterPlayer, configPlayer } from "../components/configPlayer";
-import {
-  afterMovement,
-  handleKeyDown,
-  mouseMovements,
-} from "../components/movements";
-import { mapCanvas } from "../data/map";
-import type { Map } from "../types/map";
-import { kab } from "../utils/kaboomCtx";
+import { boundaries } from "./boundaries";
+import { characterPlayer, configPlayer } from "./configPlayer";
+
+import { mapCanvas } from "@/data/map";
+import type { Map } from "@/types/map";
+import { kab } from "@/utils/kaboomCtx";
 import {
   backgroundColor,
   initScene,
@@ -17,8 +13,9 @@ import {
   spriteCharacterName,
   spriteMapImage,
   spriteMapName,
-} from "./constants";
-import { setCamScale } from "./displayDialogue";
+} from "@/utils/constants";
+import { afterMovement, handleKeyDown, mouseMovements } from "./movements";
+import { setCamScale } from "@/utils/configCanvas";
 
 kab.loadSprite(spriteCharacterName, spriteCharacterImage, characterPlayer());
 
