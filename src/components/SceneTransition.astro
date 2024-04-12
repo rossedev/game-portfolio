@@ -1,0 +1,18 @@
+---
+interface Props {
+  htmlContent: any
+}
+
+import '@/styles/scene.css'
+
+const { htmlContent } = Astro.props
+---
+
+<div class="scene-transition">
+  <div class="scene-transition__tile"></div>
+  <div class="scene-transition__tile"></div>
+  <div class="scene-transition__tile"></div>
+  <div class="scene-transition__tile"></div>
+  <div class="scene-transition__tile"></div>
+   <div class="message" set:html={htmlContent} />
+</div>

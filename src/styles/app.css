@@ -18,14 +18,15 @@
     align-items: flex-start;
     padding: 1rem;
     min-height: 10vh;
-    left: 10%;
-    right: 10%;
+    left: 15%;
+    right: 15%;
     bottom: 2vh;
     background: #eee;
     border-radius: 3px;
     outline-style: solid;
     word-spacing: 0.2rem;
     filter: 0px 0px 9px #0000002e;
+    z-index: 3;
 }
 
 .ui-text {

@@ -1,0 +1,91 @@
+.message {
+    color: white;
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    animation: fadeOut 5s ease-out forwards;
+}
+
+.scene-transition {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    scene-transition: width 0s 1.4s ease;
+    animation: hidden 8s ease forwards;
+    z-index: 9999;
+}
+
+.scene-transition__tile {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 20%;
+    background-color: #242229;
+    scene-transition: width 0.7s ease;
+}
+
+.scene-transition__tile:nth-child(1) {
+    top: 0%;
+    animation: slideInTiles 2s ease forwards;
+    animation-delay: 5s;
+}
+
+.scene-transition__tile:nth-child(2) {
+    top: 20%;
+    animation: slideInTiles 2s ease forwards;
+    animation-delay: 5.2s;
+}
+
+.scene-transition__tile:nth-child(3) {
+    top: 40%;
+    animation: slideInTiles 2s ease forwards;
+    animation-delay: 5.4s;
+}
+
+.scene-transition__tile:nth-child(4) {
+    top: 60%;
+    animation: slideInTiles 2s ease forwards;
+    animation-delay: 5.6s;
+}
+
+.scene-transition__tile:nth-child(5) {
+    top: 80%;
+    animation: slideInTiles 2s ease forwards;
+    animation-delay: 5.8s;
+}
+
+@keyframes hidden {
+    to {
+        visibility: hidden;
+    }
+}
+
+@keyframes slideInTiles {
+    from {
+        width: 100%;
+    }
+
+    to {
+        width: 0;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    75% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

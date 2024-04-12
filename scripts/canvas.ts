@@ -1,5 +1,5 @@
 import type { MouseButton } from "kaboom";
-import { boundaries } from "./boundaries";
+import { boundaries, dirOfBoundary } from "./boundaries";
 import { characterPlayer, configPlayer } from "./configPlayer";
 
 import { mapCanvas } from "@/data/map";
@@ -91,6 +91,25 @@ kab.scene(initScene, async () => {
       anim: "walk-side",
       direction: "right",
       coordInX: true,
+    });
+  });
+
+  
+  
+  const boundariesItems = document.querySelectorAll(".items");
+
+  boundariesItems.forEach((item) => {
+    item.addEventListener("click", function (this: HTMLElement) {
+      if (player.isInDialogue) return;
+
+      const id = this.id;
+      dirOfBoundary({
+        id: id,
+        layers: layers,
+        kab: kab,
+        player: player,
+        map: map,
+      });
     });
   });
 });

@@ -27,8 +27,8 @@ const Instructions = () => {
       <Modal isOpen={isOpen} onClose={closeModal}>
         <h4 style={{ marginBottom: "2rem" }}>Instrucciones</h4>
         <p>{`>>`} Puedes usar el mouse o el teclado</p>
-        <p>{`>>`} En algunos los objetos, puedes ver mensajes</p>
-        <p>{`>>`} Cierras los mensajes con: ESC, Enter o Botón cerrar</p>
+        <p>{`>>`} Hay mensajes en algunos objetos</p>
+        <p>{`>>`} Cierras los mensajes con: ESC, Enter o el botón cerrar</p>
         <p>{`>>`} Disfruta!</p>
       </Modal>
     </>

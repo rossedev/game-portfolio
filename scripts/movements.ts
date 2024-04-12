@@ -53,7 +53,6 @@ export const mouseMovements = (
 };
 
 export const afterMovement = (player: any) => {
-  console.log('player.direction', player.direction);
   if (player.direction === "down") {
     player.play("idle-down");
     return;
@@ -86,6 +85,8 @@ export const handleKeyDown = ({
   if (player.curAnim() !== anim) {
     player.play(anim);
   }
+
+  console.log("player.pos.y", player.pos.y);
 
   player.direction = direction;
 
