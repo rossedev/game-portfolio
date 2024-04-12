@@ -10,7 +10,7 @@
   "PROJECTS_TITLE": "Projects",
 
   "pc": "Here I work every day with <u>React</u>, <u>Typescript</u> and <u>Next.js</u>. Also most of the time I try different things like <u>Tailwind</u> o <u>Kaboom.js</u><br/><br/>I am also taking the CS50's Introduction to Computer Science course from Harvard University, you can see it <a href='https://cs50.harvard.edu/x/2024/' target='_blank'>here</a>, it is free but very theoretical!",
-  "resume": "Chaa chaaan!!! Here is my CV, you can <a href='' target='_blank'>download here</a> <br/><br/> I put there all the experience and knowledge as Frontened Developer.",
+  "resume": "Chaa chaaan!!! Here is my CV, you can <a href='/CV.pdf' target='_blank'>download here</a> <br/><br/> I put there all the experience and knowledge as Frontened Developer.",
   "tv": "Why are frontend developers great at social media? Because they're always on top of the latest trends.... and they always do a 'refresh' on their sense of humor to stay up to date <br/><br/> Here are my social networks, so that you can stalk me<br/> - <a target='_blank' href='https://github.com/rossedev' >Github</a> <br/> - <a target='_blank' href='https://www.linkedin.com/in/rosa-morales-1657a31a8/' >LinkedIn</a> <br/> - <a href='https://www.instagram.com/rossa_050/' target='_blank'>Instagram</a> <br/> - <a href='https://www.facebook.com/rosa.moralesolaya/' target='_blank'>Facebook</a><br/><br/>Contact me at 05rosa04@gmail.com if you have any interesting job opportunities!",
   "cs-degree": "This is my CS title. I hung it on the wall because I am proud of it. Now, I am a systems engineer. Although it was a very theoretical degree, but I think it gave me a good foundation.",
   "sofa-table": "In this comfortable armchair I plan my next trips all over the world, the last one was to Italy. I also read romance novels and programming books like Clean Code by Robert C. Martin.",
@@ -18,6 +18,7 @@
   "library": "This is my favorite place in the whole world, in these bookstores I have books of all kinds (adventure, romance, dystopia, Fantasy, etc...) but most of the books are about programming, I have books of C, C++, Python, Javascript, Typpescript, about basics and good practices; I also have Spanish and English books. <br/><br/>...Who else compulsively buys books without ever finishing them?",
   "projects": "Info about my projects, here you can see a list:<br/><br/> - Duolingo Clone (<a href='#' target='_blank'>Coming soon...</a>)<br/> - Streaming video (<a href='https://disneyrose.netlify.app' target='_blank'>Open here</a>)<br/> - E-Commerce Dashboard & CMS (<a href='#' target='_blank'>Coming soon...</a>) <br/> - Spotify Clone (<a href='#' target='_blank'>Coming soon...</a>) <br/> - English App (<a href='https://linguae.vercel.app/' target='_blank'>Open here</a>)",
   "exit": "If you want to exit RosseDev's portfolio, just close the tab",
+  "bed":"Sorry, I only sleep two hours a day.",
 
   "WAYS_TO_USE": "You can use the mouse or the keyboard",
   "MESSAGE_OBJECTS": "There are messages on some objects",

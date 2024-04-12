@@ -16,7 +16,6 @@ export const languagesList = {
   en: "English",
 };
 
-
 export const getI18N = ({ currentLocale }: { currentLocale: string }) => {
   if (currentLocale === LANGUAGES.SPANISH) return spanish;
   if (currentLocale === LANGUAGES.ENGLISH) return english;
@@ -25,11 +24,19 @@ export const getI18N = ({ currentLocale }: { currentLocale: string }) => {
 };
 
 export const getLanguage = () => {
-  let language: string | null = "en";
+  const currentUrl = location.href;
+  let language = "en";
 
-  if (typeof localStorage !== "undefined" && localStorage.getItem("language")) {
-    language = localStorage.getItem("language");
+  if (currentUrl) {
+    const partURI = currentUrl.split("/");
+    const lastElement = partURI[partURI.length - 1];
+
+    if (lastElement === "es") {
+      language = lastElement;
+    } else {
+      language = "en";
+    }
   }
 
-  return language || "en";
+  return language;
 };
