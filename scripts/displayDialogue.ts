@@ -1,6 +1,4 @@
 export function displayDialogue(text: string, onDisplayEnd: () => void) {
-  console.log('text', text);
-
   const dialogueUI = document.getElementById(
     "textbox-container"
   ) as HTMLInputElement;

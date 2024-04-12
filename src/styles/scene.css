@@ -1,12 +1,44 @@
-.message {
+.fadeOutAnimation {
+    animation: fadeOut 4s ease-out forwards;
+}
+
+.hiddenSceneAnimation {
+    animation: hidden 6s ease forwards;
+}
+
+.slideInTilesAnimation {
+    animation: slideInTiles 2s ease forwards;
+}
+
+[data-icon="heart"] {
+  color: red;
+}
+
+.messageScene p{
+    margin: 0;
+    line-height: 4rem;
+    letter-spacing: 2px;
+}
+
+.messageScene {
     color: white;
-    font-size: 40px;
+    font-size: 1.6rem;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    animation: fadeOut 5s ease-out forwards;
+    width: 100%;
+}
+
+.closeButtonScene {
+    color: white;
+    font-size: 1.6rem;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .scene-transition {
@@ -17,7 +49,6 @@
     width: 100%;
     height: 100vh;
     scene-transition: width 0s 1.4s ease;
-    animation: hidden 8s ease forwards;
     z-index: 9999;
 }
 
@@ -30,34 +61,30 @@
     scene-transition: width 0.7s ease;
 }
 
+
 .scene-transition__tile:nth-child(1) {
     top: 0%;
-    animation: slideInTiles 2s ease forwards;
-    animation-delay: 5s;
+    animation-delay: 4s;
 }
 
 .scene-transition__tile:nth-child(2) {
     top: 20%;
-    animation: slideInTiles 2s ease forwards;
-    animation-delay: 5.2s;
+    animation-delay: 4.2s;
 }
 
 .scene-transition__tile:nth-child(3) {
     top: 40%;
-    animation: slideInTiles 2s ease forwards;
-    animation-delay: 5.4s;
+    animation-delay: 4.4s;
 }
 
 .scene-transition__tile:nth-child(4) {
     top: 60%;
-    animation: slideInTiles 2s ease forwards;
-    animation-delay: 5.6s;
+    animation-delay: 4.6s;
 }
 
 .scene-transition__tile:nth-child(5) {
     top: 80%;
-    animation: slideInTiles 2s ease forwards;
-    animation-delay: 5.8s;
+    animation-delay: 4.8s;
 }
 
 @keyframes hidden {

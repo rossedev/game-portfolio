@@ -1,0 +1,45 @@
+#textbox-container {
+    display: none;
+}
+
+#textbox {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 1rem;
+    min-height: 10vh;
+    left: 15%;
+    right: 15%;
+    bottom: 2vh;
+    background: #eee;
+    border-radius: 3px;
+    outline-style: solid;
+    word-spacing: 0.2rem;
+    filter: 0px 0px 9px #0000002e;
+    z-index: 3;
+}
+
+.ui-text {
+    margin: 0;
+    user-select: none;    
+}
+
+.ui-text a{
+    text-decoration: none;
+}
+
+.btn-container {
+    align-self: flex-end;
+    margin-top: 1rem;
+}
+
+.ui-close-btn {
+    font-family: inherit;
+    border-style: none;
+    border-radius: 3px;
+    font-size: inherit;
+    cursor: pointer;
+}

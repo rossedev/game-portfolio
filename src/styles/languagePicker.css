@@ -1,0 +1,22 @@
+.container {
+    border-radius: 100px;
+    padding-top: 5px;
+    font-size: 0.8rem;
+    
+}
+.container a {
+    color: white;
+    text-decoration: none;
+}
+
+u {
+    cursor: pointer;
+}
+
+.isSelected {
+    color: #8c83ff;
+}
+
+.title_modal {
+    margin: 5px 0px 1rem 0;
+}

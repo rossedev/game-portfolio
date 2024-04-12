@@ -1,15 +1,13 @@
-import { getI18N } from "@/i18n";
+import { getLanguage, getI18N } from "@/i18n";
 import type { Layer } from "@/types/map";
-import { getLangFromUrl } from "@/utils/configCanvas";
 import { scaleFactor } from "@/utils/constants";
 import { displayDialogue } from "./displayDialogue";
 
-const urlParams = new URL(location.href);
-const locale = getLangFromUrl(urlParams);
-const i18n: any = getI18N({ currentLocale: locale });
-const sceneTransition = document.querySelector(".scene-transition") as any;
+const locale = getLanguage();
+const i18n: any = getI18N({ currentLocale: locale || "en" });
 
 export const boundaries = (layer: Layer, kab: any, player: any, map: any) => {
+  
   if (layer.name === "boundaries") {
     for (const boundary of layer.objects) {
       map.add([

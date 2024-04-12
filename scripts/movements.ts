@@ -86,8 +86,6 @@ export const handleKeyDown = ({
     player.play(anim);
   }
 
-  console.log("player.pos.y", player.pos.y);
-
   player.direction = direction;
 
   if (coordInX) {

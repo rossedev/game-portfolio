@@ -1,4 +1,4 @@
-import "../styles/app.css";
+import "../styles/textbox.css";
 
 export const Textbox = () => {
   return (

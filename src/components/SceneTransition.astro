@@ -1,11 +1,14 @@
 ---
-interface Props {
-  htmlContent: any
-}
+import { getI18N } from '@/i18n'
+import { Icon } from 'astro-icon/components'
 
 import '@/styles/scene.css'
 
-const { htmlContent } = Astro.props
+const i18n = getI18N({currentLocale: Astro.currentLocale || 'en'})
+
+interface Props {
+  htmlContent: any
+}
 ---
 
 <div class="scene-transition">
@@ -14,5 +17,19 @@ const { htmlContent } = Astro.props
   <div class="scene-transition__tile"></div>
   <div class="scene-transition__tile"></div>
   <div class="scene-transition__tile"></div>
-   <div class="message" set:html={htmlContent} />
+  <div class="messageScene">
+    <p>
+      {i18n.INTRO_TITLE}
+     
+    </p>    
+     <Icon name="heart" />
+    <div class="instructions">
+      <p>{`>>`} {i18n.WAYS_TO_USE}</p>
+      <p>{`>>`} {i18n.MESSAGE_OBJECTS}</p>
+      <p>{`>>`} {i18n.CLOSE_MESSAGE_WITH}</p>
+      <p>{`>>`} {i18n.ENJOY}</p>
+    </div>
+  </div>    
 </div>
+
+<script src="../../scripts/sceneTransition"></script>
