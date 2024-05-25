@@ -16,19 +16,19 @@
   "sofa-table": "En este comodo sillón planeo mis proximos viajes a todo el mundo, el ultimo fue para Italia. Tambien leo novelas romanticas y libros de programación como Clean Code de Robert C. Martin",
   "kitchen": "en este lugar, comiendo pan y tomando café, he tenido las mejores ideas ya que puedo relajarme y pensar bien la solucion al problema que tengo frente a mi o simplemente llegan buenas ideas de proyectos que me gustaria realizar.",
   "library": "Este es mi lugar favorito en todo el mundo, en estas librerías tengo libros de todo tipo (aventura, romance, distopía, Fantasía, etc...) pero la mayoría de los libros son sobre programación, tengo libros de C, C++, Python, Javascript, Typpescript, sobre fundamentos y buenas prácticas; también tengo libros en español e inglés. <br/><br/>...¿Quién más compra compulsivamente libros sin terminarlos nunca?",
-  "projects": "Información sobre mis proyectos, aquí puedes ver una lista:<br/><br/> - Duolingo Clone (<a href='#' target='_blank'>Coming soon...</a>)<br/> - Streaming video (<a href='https://disneyrose.netlify. app' target='_blank'>Abre aquí</a>)<br/> - E-Commerce Dashboard & CMS (<a href='#' target='_blank'>Próximamente...</a>) <br/> - Spotify Clone (<a href='#' target='_blank'>Próximamente...</a>) <br/> - English App (<a href='https://linguae.vercel.app/' target='_blank'>Abre aquí</a>)",
+  "projects": "Información sobre mis proyectos, aquí puedes ver una lista:<br/><br/> - Duolingo Clone (<a href='https://catlingo.vercel.app' target='_blank'>Open here.</a>)<br/> - Streaming video (<a href='https://disneyrose.netlify. app' target='_blank'>Abre aquí</a>)<br/> - E-Commerce Dashboard & CMS (<a href='#' target='_blank'>Próximamente...</a>) <br/> - Spotify Clone (<a href='#' target='_blank'>Próximamente...</a>) <br/> - English App (<a href='https://linguae.vercel.app/' target='_blank'>Abre aquí</a>)",
   "exit": "Si desea salir del portafolio de RosseDev, sólo tiene que cerrar la pestaña",
-  "bed":"Lo siento, sólo duermo dos horas al día.",
+  "bed": "Lo siento, sólo duermo dos horas al día.",
 
   "WAYS_TO_USE": "Puedes usar el mouse o el teclado",
   "MESSAGE_OBJECTS": "Hay mensajes en algunos objetos",
   "CLOSE_MESSAGE_WITH": "Cierras los mensajes con: ESC, Enter o el botón cerrar",
   "ENJOY": "Disfruta!",
 
-  "LANGUAGE_PREFER":"¿Qué idioma prefieres?",
-  "LANGUAGE_WE_HAVE":"Tenemos",
-  "LANGUAGE_SPANISH":"Español",
-  "LANGUAGE_ENGLISH":"Ingles",
-  "OR":"ó",
-  "GET_IT":"Lo entiendo!"
+  "LANGUAGE_PREFER": "¿Qué idioma prefieres?",
+  "LANGUAGE_WE_HAVE": "Tenemos",
+  "LANGUAGE_SPANISH": "Español",
+  "LANGUAGE_ENGLISH": "Ingles",
+  "OR": "ó",
+  "GET_IT": "Lo entiendo!"
 }

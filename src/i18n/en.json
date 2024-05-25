@@ -16,9 +16,9 @@
   "sofa-table": "In this comfortable armchair I plan my next trips all over the world, the last one was to Italy. I also read romance novels and programming books like Clean Code by Robert C. Martin.",
   "kitchen": "In this place, eating bread and drinking coffee, I have had the best ideas because I can relax and think about the solution to the problem I have in front of me or just get good ideas of projects that I would like to do.",
   "library": "This is my favorite place in the whole world, in these bookstores I have books of all kinds (adventure, romance, dystopia, Fantasy, etc...) but most of the books are about programming, I have books of C, C++, Python, Javascript, Typpescript, about basics and good practices; I also have Spanish and English books. <br/><br/>...Who else compulsively buys books without ever finishing them?",
-  "projects": "Info about my projects, here you can see a list:<br/><br/> - Duolingo Clone (<a href='#' target='_blank'>Coming soon...</a>)<br/> - Streaming video (<a href='https://disneyrose.netlify.app' target='_blank'>Open here</a>)<br/> - E-Commerce Dashboard & CMS (<a href='#' target='_blank'>Coming soon...</a>) <br/> - Spotify Clone (<a href='#' target='_blank'>Coming soon...</a>) <br/> - English App (<a href='https://linguae.vercel.app/' target='_blank'>Open here</a>)",
+  "projects": "Info about my projects, here you can see a list:<br/><br/> - Duolingo Clone (<a href='https://catlingo.vercel.app' target='_blank'>Open here.</a>)<br/> - Streaming video (<a href='https://disneyrose.netlify.app' target='_blank'>Open here</a>)<br/> - E-Commerce Dashboard & CMS (<a href='#' target='_blank'>Coming soon...</a>) <br/> - Spotify Clone (<a href='#' target='_blank'>Coming soon...</a>) <br/> - English App (<a href='https://linguae.vercel.app/' target='_blank'>Open here</a>)",
   "exit": "If you want to exit RosseDev's portfolio, just close the tab",
-  "bed":"Sorry, I only sleep two hours a day.",
+  "bed": "Sorry, I only sleep two hours a day.",
 
   "WAYS_TO_USE": "You can use the mouse or the keyboard",
   "MESSAGE_OBJECTS": "There are messages on some objects",
@@ -30,5 +30,5 @@
   "LANGUAGE_SPANISH": "Spanish",
   "LANGUAGE_ENGLISH": "English",
   "OR": "or",
-  "GET_IT":"I get it!"
+  "GET_IT": "I get it!"
 }
